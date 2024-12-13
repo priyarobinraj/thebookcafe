@@ -120,7 +120,7 @@ nav {
   }
 }
 .sec1 {
-  background-image: url("images/bgsec.jpg");
+  background-image: url("images/bgggg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -137,7 +137,7 @@ nav {
       justify-content: center;
       h1 {
         font-family: royal;
-        color: rgb(104, 78, 31);
+        color: rgb(58, 39, 3);
         font-size: 40px;
         padding-bottom: 1rem;
       }
