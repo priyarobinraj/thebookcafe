@@ -40,16 +40,6 @@ nav {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
   }
-  .navbar {
-    background-color: rgba(74, 60, 38, 0.9);
-    padding: 3px 0 3px 0;
-    color: rgb(217, 223, 228);
-    font-family: monospace;
-    font-size: 13px;
-    letter-spacing: 0.01ch;
-    word-spacing: 0.2cm;
-    overflow: hidden;
-  }
   .relative {
     position: relative;
     width: 100%;
@@ -81,7 +71,7 @@ nav {
         &::placeholder {
           position: absolute;
           left: 10px;
-          top: 8px;
+          top: 5.5px;
           font-family: cursive;
         }
         &:hover {
@@ -103,6 +93,31 @@ nav {
     }
   }
 }
+.navbar {
+  background-color: rgba(74, 60, 38, 0.9);
+  padding: 7px 0 7px 0;
+  color: rgb(217, 223, 228);
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.01ch;
+  word-spacing: 0.2cm;
+  overflow: hidden;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  .toplogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    z-index: 10;
+    img {
+      width: 20%;
+    }
+  }
+}
 .move {
   white-space: nowrap;
   overflow: hidden;
@@ -110,6 +125,7 @@ nav {
   animation: moveRight linear infinite;
   animation-duration: 20s;
   animation-delay: 0s;
+  z-index: 5;
 }
 @keyframes moveRight {
   0% {
@@ -120,7 +136,7 @@ nav {
   }
 }
 .sec1 {
-  background-image: url("images/bgggg.jpg");
+  background-image: url("images/background3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -256,12 +272,12 @@ footer {
         color: antiquewhite;
         font-family: cursive;
         font-size: 13px;
+        padding: 2px;
         &:hover {
           background-color: aliceblue;
           color: black;
-          border: 1px solid black;
+          outline: 1px solid black;
           border-radius: 7px;
-          padding: 2px;
         }
       }
     }
@@ -287,12 +303,12 @@ footer {
         li {
           list-style-type: none;
           text-decoration: none;
+          padding: 2px;
           &:hover {
             background-color: aliceblue;
             color: black;
-            border: 1px solid black;
+            outline: 1px solid black;
             border-radius: 7px;
-            padding: 2px;
             cursor: pointer;
           }
         }
