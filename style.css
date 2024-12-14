@@ -181,7 +181,7 @@ nav {
 }
 .sec2 {
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 5rem;
   background-image: url(images/background3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -235,7 +235,7 @@ nav {
             .cart {
               display: flex;
               flex-direction: column;
-              gap: 2px;
+              gap: 5px;
               text-align: center;
               .price {
                 font-family: curly1;
