@@ -2,11 +2,27 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @font-face {
   font-family: royal;
   src: url(./css/royal.ttf/Royal\ Beach.otf);
+}
+
+@font-face {
+  font-family: handwrite;
+  src: url(./css/handwrite.ttf/Shorelines\ Script\ Bold.otf);
+}
+
+@font-face {
+  font-family: curly1;
+  src: url(./css/curly1.ttf/charlotte.otf);
+}
+
+@font-face {
+  font-family: curly2;
+  src: url(./css/curly2.ttf/curly2.2.otf);
 }
 
 .maincontainer {
@@ -19,7 +35,7 @@ nav {
   background-image: url("images/background-RTJRS9m31-transformed.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 600px;
 
   &::before {
     content: "";
@@ -31,62 +47,103 @@ nav {
     background-color: rgba(0, 0, 0, 0.3);
   }
 
-  .navbar {
-    background-color: rgba(74, 60, 38, 0.9);
-    padding: 3px 0 3px 0;
-    color: rgb(217, 223, 228);
+  .relative {
     position: relative;
-    font-family: monospace;
-    font-size: 13px;
-    letter-spacing: 0.01ch;
-    word-spacing: 0.2cm;
-    overflow: hidden;
-  }
+    width: 100%;
 
-  .logo {
-    img {
-      width: 29rem;
+    .centerbox {
       position: absolute;
-      left: 20rem;
-      top: 7rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    .header {
+      position: relative;
+      width: 500px;
+    }
+
+    .logo {
+      img {
+        width: 26rem;
+      }
+    }
+
+    .form {
+      position: absolute;
+      left: 33%;
+      top: 58%;
+      display: flex;
+
+      #search {
+        padding: 8px 16px;
+        border-radius: 10px 0 0 10px;
+        background-color: rgba(248, 230, 202, 0.9);
+        border: 1px solid rgba(74, 60, 38, 0.9);
+
+        &::placeholder {
+          position: absolute;
+          left: 10px;
+          top: 5.5px;
+          font-family: cursive;
+        }
+
+        &:hover {
+          background-color: rgb(108, 89, 57);
+        }
+      }
+
+      button {
+        padding: 8px 16px;
+        border-radius: 0 10px 10px 0;
+        border: 1px solid rgba(74, 60, 38, 0.9);
+        font-size: 10px;
+        font-family: cursive;
+        letter-spacing: 0.01cm;
+        background-color: rgba(253, 242, 229, 0.9);
+
+        &:hover {
+          background-color: rgb(108, 89, 57);
+        }
+      }
+    }
+
+    .para {
+      color: rgb(250, 235, 215);
+      position: absolute;
+      font-family: cursive;
+      font-size: 8px;
+      left: 26%;
+      top: 11.5rem;
     }
   }
+}
 
-  .form {
-    position: absolute;
-    left: 32rem;
-    top: 17rem;
+.navbar {
+  background-color: rgba(74, 60, 38, 0.9);
+  padding: 7px 0 7px 0;
+  color: rgb(217, 223, 228);
+  font-family: monospace;
+  font-size: 13px;
+  letter-spacing: 0.01ch;
+  word-spacing: 0.2cm;
+  overflow: hidden;
+}
 
-    #search {
-      padding: 10px 55px;
-      border-radius: 10px 0 0 10px;
-      background-color: rgba(248, 230, 202, 0.9);
-      border: 1px solid rgba(74, 60, 38, 0.9);
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
 
-      &::placeholder {
-        position: absolute;
-        left: 10px;
-        top: 8px;
-        font-family: cursive;
-      }
+  .toplogo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 1rem;
+    z-index: 50;
 
-      &:hover {
-        background-color: rgb(108, 89, 57);
-      }
-    }
-
-    button {
-      padding: 11px 16px;
-      border-radius: 0 10px 10px 0;
-      border: 1px solid rgba(74, 60, 38, 0.9);
-      font-size: 10px;
-      font-family: cursive;
-      letter-spacing: 0.01cm;
-      background-color: rgb(253, 242, 229);
-
-      &:hover {
-        background-color: rgb(108, 89, 57);
-      }
+    img {
+      width: 20%;
     }
   }
 }
@@ -98,6 +155,7 @@ nav {
   animation: moveRight linear infinite;
   animation-duration: 20s;
   animation-delay: 0s;
+  z-index: 5;
 }
 
 @keyframes moveRight {
@@ -111,14 +169,13 @@ nav {
 }
 
 .sec1 {
-  background-image: url("images/bgsec.jpg");
+  background-image: url("images/background3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 90vh;
 }
 
 .section-1 {
-  padding-top: 3rem;
+  padding-top: 0.5rem;
   max-width: 1000px;
   margin: 0 auto;
 
@@ -133,7 +190,7 @@ nav {
 
       h1 {
         font-family: royal;
-        color: rgb(104, 78, 31);
+        color: rgb(58, 39, 3);
         font-size: 40px;
         padding-bottom: 1rem;
       }
@@ -155,42 +212,212 @@ nav {
 }
 
 .sec2 {
-  padding-top: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background-image: url(images/background3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 
+  h1 {
+    padding-bottom: 4rem;
+    text-align: center;
+    font-family: handwrite;
+    font-size: 5rem;
+    color: rgb(50, 32, 4);
+  }
+
   .carousel {
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 5rem;
 
-    .items {
+    .wholeitems {
+      h2 {
+        text-align: center;
+        padding-bottom: 1.5em;
+        font-family: curly2;
+        font-size: 2rem;
+        color: rgb(17, 17, 17);
+      }
+
+      span {
+        font-size: 1rem;
+      }
+
+      .items {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 7rem;
+
+        .item {
+          width: 240px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          background-color: rgba(252, 246, 235, 0.9);
+          padding: 10px 10px 20px 10px;
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out;
+
+          &:hover {
+            transform: translateY(-20px);
+          }
+
+          .info {
+            display: flex;
+            gap: 4rem;
+
+            .star {
+              display: flex;
+              color: #ffba0a;
+              padding-top: 5px;
+            }
+
+            .cart {
+              display: flex;
+              flex-direction: column;
+              gap: 2px;
+              text-align: center;
+
+              .price {
+                font-family: curly1;
+              }
+
+              a {
+                text-decoration: none;
+                list-style-type: none;
+                color: white;
+                background-color: #793935;
+                padding: 5px 4px;
+                border: 1px solid black;
+                border-radius: 10px;
+
+                &:hover {
+                  background-color: antiquewhite;
+                  color: black;
+                }
+              }
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #322718;
+  padding: 70px 0;
+
+  h2 {
+    color: antiquewhite;
+    font-family: curly1;
+    font-size: 23px;
+    padding-bottom: 10px;
+  }
+
+  .footers {
+    display: flex;
+    gap: 6rem;
+    align-items: flex-start;
+    justify-content: center;
+
+    .links {
       display: flex;
-      justify-content: center;
-      gap: 9rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
 
-      .item {
-        img {
-          width: 16rem;
-        }
+      a {
+        list-style-type: none;
+        text-decoration: none;
+        color: antiquewhite;
+        font-family: cursive;
+        font-size: 13px;
+        padding: 2px;
 
-        .one {
-          height: 58.4vh;
-        }
-
-        .two {
-          height: 59vh;
+        &:hover {
+          background-color: aliceblue;
+          color: black;
+          outline: 1px solid black;
+          border-radius: 7px;
         }
       }
     }
 
-    .lone {
-      margin: 0 auto;
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
 
-      img {
-        width: 16rem;
+      i {
+        color: antiquewhite;
+        font-size: 23px;
       }
+    }
+
+    .footinf {
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        color: antiquewhite;
+        font-family: cursive;
+        font-size: 13px;
+
+        li {
+          list-style-type: none;
+          text-decoration: none;
+          padding: 2px;
+
+          &:hover {
+            background-color: aliceblue;
+            color: black;
+            outline: 1px solid black;
+            border-radius: 7px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .footlogo {
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 10%;
+      border-right: 2px solid antiquewhite;
+      padding-right: 1rem;
+    }
+
+    p {
+      color: antiquewhite;
+      font-family: cursive;
+    }
+  }
+
+  .cprt {
+    p {
+      color: antiquewhite;
+      font-family: cursive;
+      text-align: center;
+      padding-top: 3rem;
+      font-size: 10px;
     }
   }
 }
