@@ -50,49 +50,41 @@ nav {
   .relative {
     position: relative;
     width: 100%;
-
     .centerbox {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, 50%);
     }
-
     .header {
       position: relative;
       width: 500px;
     }
-
     .logo {
       img {
         width: 26rem;
       }
     }
-
     .form {
       position: absolute;
       left: 33%;
       top: 58%;
       display: flex;
-
       #search {
         padding: 8px 16px;
         border-radius: 10px 0 0 10px;
         background-color: rgba(248, 230, 202, 0.9);
         border: 1px solid rgba(74, 60, 38, 0.9);
-
         &::placeholder {
           position: absolute;
           left: 10px;
           top: 5.5px;
           font-family: cursive;
         }
-
         &:hover {
           background-color: rgb(108, 89, 57);
         }
       }
-
       button {
         padding: 8px 16px;
         border-radius: 0 10px 10px 0;
@@ -106,7 +98,6 @@ nav {
         }
       }
     }
-
     .para {
       color: rgb(250, 235, 215);
       position: absolute;
@@ -151,7 +142,6 @@ nav {
   animation-duration: 20s;
   animation-delay: 0s;
 }
-
 @keyframes moveRight {
   0% {
     transform: translateX(100%);
@@ -320,9 +310,8 @@ footer {
   .footers {
     display: flex;
     gap: 6rem;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-
     .links {
       display: flex;
       flex-direction: column;
@@ -410,6 +399,145 @@ footer {
       text-align: center;
       padding-top: 3rem;
       font-size: 10px;
+    }
+  }
+}
+@media all and (min-width: 400px) {
+  .nav {
+    padding: 4px 0;
+    font-size: 9px;
+    .toplogo {
+      img {
+        width: 15%;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    background-image: url(images/bg-res.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    .relative {
+      .centerbox {
+        .header {
+          .logo {
+            img {
+              width: 10rem;
+              position: absolute;
+              top: 7rem;
+              left: 48%;
+            }
+          }
+          .form {
+            display: none;
+          }
+          .para {
+            font-size: 8px;
+            left: 38%;
+          }
+        }
+      }
+    }
+  }
+  .sec1 {
+    .section-1 {
+      max-width: 90%;
+      margin: 0 auto;
+      .whole-1 {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 30px;
+        .para1 {
+          font-size: 10px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 20px;
+          text-align: center;
+        }
+        .right1 {
+          img {
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+  .sec2 {
+    h1 {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+    }
+    .carousel {
+      flex-direction: column;
+      .wholeitems {
+        h2 {
+          font-size: 22px;
+        }
+        span {
+          font-size: 10px;
+          text-align: center;
+        }
+        .items {
+          flex-direction: column;
+          align-items: center;
+          gap: 4rem;
+        }
+      }
+    }
+  }
+  footer {
+    h2 {
+      font-size: 16px;
+      padding-bottom: 5px;
+    }
+    .footers {
+      flex-direction: column;
+      gap: 3rem;
+      align-items: center;
+      .links {
+        gap: 7px;
+        align-items: center;
+        padding: 3px 9px;
+        a {
+          font-size: 11px;
+        }
+      }
+      .contact {
+        gap: 1rem;
+        h2 {
+          padding-bottom: 1px;
+        }
+      }
+      .footinf {
+        h2 {
+          font-size: 14px;
+          text-align: center;
+          padding-bottom: 1rem;
+        }
+        ul {
+          gap: 10px;
+          font-size: 11px;
+          li {
+            padding-bottom: 5px 9px;
+          }
+        }
+      }
+    }
+    .footlogo {
+      padding-top: 3rem;
+      img {
+        width: 25%;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+    .cprt {
+      p {
+        font-size: 8px;
+      }
     }
   }
 }
