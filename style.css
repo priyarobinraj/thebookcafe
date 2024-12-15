@@ -440,8 +440,9 @@ footer {
         display: none;
       }
       .para {
-        font-size: 5px;
-        left: 5%;
+        font-size: 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        left: 12%;
         top: 4.7rem;
         text-align: center;
       }
