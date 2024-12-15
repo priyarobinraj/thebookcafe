@@ -243,7 +243,6 @@ nav {
           padding: 10px 10px 20px 10px;
           overflow: hidden;
           transition: transform 0.3s ease-in-out;
-
           &:hover {
             transform: translateY(-20px);
           }
@@ -404,8 +403,8 @@ footer {
 }
 @media all and (max-width: 500px) {
   .nav {
-    padding: 4px 0;
-    font-size: 9px;
+    padding: 7px 0;
+    font-size: 6px;
     .toplogo {
       img {
         width: 15%;
@@ -417,26 +416,34 @@ footer {
     background-image: url(images/bg-res.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 250px;
     .relative {
+      width: 100%;
+      margin: 0 auto;
       .centerbox {
-        .header {
-          .logo {
-            img {
-              width: 10rem;
-              position: absolute;
-              top: 7rem;
-              left: 48%;
-            }
-          }
-          .form {
-            display: none;
-          }
-          .para {
-            font-size: 8px;
-            left: 38%;
-          }
+        top: 45%;
+        left: 49%;
+        transform: translate(-50%, 81%);
+      }
+      .header {
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo {
+        img {
+          width: 10rem;
+          margin: 0 auto;
         }
+      }
+      .form {
+        display: none;
+      }
+      .para {
+        font-size: 5px;
+        left: 5%;
+        top: 4.7rem;
+        text-align: center;
       }
     }
   }
@@ -451,6 +458,7 @@ footer {
         .para1 {
           font-size: 10px;
           width: 100%;
+          font-weight: bolder;
         }
         h1 {
           font-size: 20px;
@@ -474,6 +482,7 @@ footer {
       .wholeitems {
         h2 {
           font-size: 22px;
+          padding-bottom: 5px;
         }
         span {
           font-size: 10px;
@@ -482,7 +491,28 @@ footer {
         .items {
           flex-direction: column;
           align-items: center;
-          gap: 4rem;
+          gap: 2rem;
+          .item {
+            width: 220px;
+            padding: 8px 8px 15px 8px;
+            .info {
+              gap: 4rem;
+              .star {
+                font-size: 15px;
+                text-align: center;
+              }
+              .cart {
+                gap: 3px;
+                .price {
+                  font-size: 11px;
+                }
+                a {
+                  font-size: 9px;
+                  padding: 4px 9px;
+                }
+              }
+            }
+          }
         }
       }
     }
