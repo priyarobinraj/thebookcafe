@@ -402,7 +402,7 @@ footer {
     }
   }
 }
-@media all and (min-width: 400px) {
+@media all and (max-width: 500px) {
   .nav {
     padding: 4px 0;
     font-size: 9px;
