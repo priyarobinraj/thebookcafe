@@ -440,7 +440,7 @@ footer {
         display: none;
       }
       .para {
-        font-size: 7px;
+        font-size: 6px;
         font-family: Arial, Helvetica, sans-serif;
         left: 12%;
         top: 4.7rem;
@@ -533,6 +533,7 @@ footer {
         padding: 3px 9px;
         a {
           font-size: 11px;
+          font-family: "Courier New", Courier, monospace;
         }
       }
       .contact {
@@ -552,6 +553,7 @@ footer {
           font-size: 11px;
           li {
             padding-bottom: 5px 9px;
+            font-family: "Courier New", Courier, monospace;
           }
         }
       }
@@ -563,11 +565,13 @@ footer {
       }
       p {
         font-size: 10px;
+        font-family: "Courier New", Courier, monospace;
       }
     }
     .cprt {
       p {
         font-size: 8px;
+        font-family: "Courier New", Courier, monospace;
       }
     }
   }
