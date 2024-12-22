@@ -373,11 +373,11 @@ footer {
     }
   }
 }
-@media all and (max-width: 700px) {
+@media all and (max-width: 800px) {
   nav {
     .navbar {
       .toplogo {
-        width: 15%;
+        width: 13%;
         padding-inline: 0;
         img {
           width: 5rem;
@@ -548,22 +548,24 @@ footer {
   nav {
     .navbar {
       .toplogo {
-        width: 16%;
+        width: 23%;
         padding-inline: 0;
         img {
+          padding-top: 3px;
           width: 4rem;
         }
       }
       .hidden {
         .move {
           width: 100%;
-          font-size: 5px;
+          font-size: 3px;
         }
       }
     }
   }
   .hero {
     background-size: cover;
+    padding-block: 3rem;
     .header {
       .logo {
         img {
@@ -571,19 +573,7 @@ footer {
         }
       }
       .form {
-        left: 67%;
-        top: 65%;
-        #search {
-          padding: 2px 2px;
-          &::placeholder {
-            font-size: 9px;
-            top: 3px;
-          }
-        }
-        button {
-          padding: 4px 5px;
-          font-size: 7px;
-        }
+        display: none;
       }
     }
   }
