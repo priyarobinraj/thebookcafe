@@ -58,7 +58,7 @@
     z-index: 4;
     color: white;
     animation: moveRight infinite 15s linear;
-    font-size: 13px;
+    font-size: 9px;
     font-family: "Courier New", Courier, monospace;
   }
 }
@@ -558,7 +558,7 @@ footer {
       .hidden {
         .move {
           width: 100%;
-          font-size: 3px;
+          font-size: 5px;
         }
       }
     }
